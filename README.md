@@ -70,7 +70,7 @@ https://www.erdcloud.com/d/hC5ZaGYqaP3oha66s
 | **대중교통 정보**  | 관광지 접근에 필요한 대중교통(지하철·버스 등) 정보 제공               |
 
 
-기술스택
+**기술스택**
 <img width="1718" height="970" alt="image" src="https://github.com/user-attachments/assets/b316b541-eca1-4ed2-a1f3-595c983b5a34" />
 <img width="1714" height="928" alt="image" src="https://github.com/user-attachments/assets/1e55017a-3216-4d89-b2bf-7d2ddbabd1b0" />
 
