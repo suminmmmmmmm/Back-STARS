@@ -17,7 +17,7 @@ SK쉴더스 루키즈 최종 프로젝트 **백엔드 리포지토리**입니다
 
 <img width="1650" height="750" alt="image" src="https://github.com/user-attachments/assets/715df914-354a-4a62-ba7a-5dde2956afbc" />
 
-| Service | API Type | 설 |
+서비스 | API 유형 | 역할 설명
 |--------|----------|-------------|
 | **Gateway** | REST | 모든 클라이언트 요청의 진입점<br>라우팅, CORS, Timeout 설정 중앙 관리 |
 | **User Service** | REST | 회원가입, 로그인, 사용자 정보 관리<br>JWT 기반 인증·인가 및 사용자 식별 |
@@ -56,10 +56,15 @@ SK쉴더스 루키즈 최종 프로젝트 **백엔드 리포지토리**입니다
 5. 접속한 후 \dt 로 테이블 존재 확인 가능, select 문으로 데이터 확인 가능
 + select * from area; 로 결과를 본 후, q 를 눌러야 다시 명령창으로 돌아갈 수 있음
 
+<summary>토큰 redis에 저장</summary>
+
 </details>
 
-<summary>토큰 redis에 저장</summary>
----
+
+
+
+
+
 
 📄 API Documentation (Postman)
 https://documenter.getpostman.com/view/29374455/2sB2qZEN9h
