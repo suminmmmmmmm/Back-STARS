@@ -74,6 +74,9 @@ https://documenter.getpostman.com/view/29374455/2sB2qZEN9h
 📊 ERD
 https://www.erdcloud.com/d/hC5ZaGYqaP3oha66s
 
+NOTION
+https://almond-comfort-a8a.notion.site/1-1c0fef49d8d580e29afcd1902561e2ad?pvs=74
+
 
 
 
