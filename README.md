@@ -46,8 +46,13 @@ SK쉴더스 루키즈 최종프로젝트 백엔드 리포지토리 입니다.
 📄 API Documentation (Postman)
 https://documenter.getpostman.com/view/29374455/2sB2qZEN9h
 
+
+
 📊 ERD
 https://www.erdcloud.com/d/hC5ZaGYqaP3oha66s
+
+
+
 
 
 🧩 주요 기능 (Key Features)
@@ -71,5 +76,4 @@ https://www.erdcloud.com/d/hC5ZaGYqaP3oha66s
 
 
 
-- 
 
