@@ -41,5 +41,35 @@ SK쉴더스 루키즈 최종프로젝트 백엔드 리포지토리 입니다.
 </details>
 
 <summary>토큰 redis에 저장</summary>
+
+
+📄 API Documentation (Postman)
+https://documenter.getpostman.com/view/29374455/2sB2qZEN9h
+
+📊 ERD
+https://www.erdcloud.com/d/hC5ZaGYqaP3oha66s
+
+
+🧩 주요 기능 (Key Features)
+| 기능           | 설명                                             |
+| ------------ | ---------------------------------------------- |
+| **회원가입/로그인**   |회원가입 시 DB에 유저정보가 등록되어 사용자 인증 정보를 통해 로그인     |
+| **혼잡도 제공**   | 장소별 실시간 인구 밀집 데이터를 기반으로 관광지 혼잡도를 시각화하여 제공      |
+| **관광지 추천**   | 사용자 선택 조건 및 알고리즘 기준에 따라 관광지 추천 목록 제공           |
+| **행사 목록**    | 현재 서울에서 진행 중이거나 예정된 문화·관광 행사 목록 제공             |
+| **장소 검색**    | 검색 엔진(Elasticsearch)을 활용하여 등록된 관광지를 조건 기반으로 검색 |
+| **챗봇**       | 사용자의 관광 관련 질문에 대해 AI 기반 답변 제공                  |
+| **유동인구 정보**  | 관광지의 실시간 유동인구 수를 제공하며, 성별·연령대별 정보 확장 가능 구조     |
+| **타사 리뷰 요약** | 네이버지도·카카오맵 리뷰를 감정 분석하여 장점/단점을 요약 제공            |
+| **리뷰 작성**    | 사용자가 관광지에 대한 후기를 직접 작성할 수 있는 기능                |
+| **대중교통 정보**  | 관광지 접근에 필요한 대중교통(지하철·버스 등) 정보 제공               |
+
+
+기술스택
+<img width="1718" height="970" alt="image" src="https://github.com/user-attachments/assets/b316b541-eca1-4ed2-a1f3-595c983b5a34" />
+<img width="1714" height="928" alt="image" src="https://github.com/user-attachments/assets/1e55017a-3216-4d89-b2bf-7d2ddbabd1b0" />
+
+
+
 - 
 
