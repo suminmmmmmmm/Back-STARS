@@ -5,6 +5,17 @@ SK쉴더스 루키즈 최종프로젝트 백엔드 리포지토리 입니다.
 > congestion : port 8081<br>
 > place :      port 8082<br>
 > user :       port 8083
+>개발 단계에서는 각 서비스를 **독립적인 포트로 분리하여 실행**함으로써  
+서비스 간 책임을 명확히 하고, 기능별 테스트 및 디버깅이 용이하도록 구성하였습니다.
+>배포 환경에서는 **단일 엔드포인트로 통합**하여 클라이언트는 내부 서비스 구조를 인지하지 않고 접근할 수 있도록 설계했습니다.
+<img width="1650" height="750" alt="image" src="https://github.com/user-attachments/assets/715df914-354a-4a62-ba7a-5dde2956afbc" />
+본 프로젝트는 **MSA 기반 백엔드 구조**로 설계되었습니다.
+
+| ------------ | ---------------------------------------------- |
+| **Gateway**   |모든 클라이언트 요청의 진입점 / 라우팅, CORS, Timeout 설정을 중앙에서 관리  |
+| **User Service (REST API)**   | 회원가입, 로그인, 사용자 정보 관리 / 인증&인가 처리 및 사용자 식별 책임     |
+| **Place Service (REST API)**   | 관광지, 음식점, 숙박, 행사 정보 제공/ Elasticsearch 기반 장소 검색 및 조회 담당/ 타사 리뷰 요약, 관광지 추천 API 제공         |
+| **Congestion Service (SSE API)**    | 실시간 인구 밀집도, 사고·통제, 날씨 정보 처리 / Server-Sent Events(SSE)를 통해 클라이언트에 실시간 스트리밍 제공            |
 
 <details>
 <summary>로컬에서 postgreSQL 테스트</summary>
