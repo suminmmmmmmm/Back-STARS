@@ -59,7 +59,7 @@ SK쉴더스 루키즈 최종 프로젝트 **백엔드 리포지토리**입니다
 </details>
 
 <summary>토큰 redis에 저장</summary>
-
+---
 
 📄 API Documentation (Postman)
 https://documenter.getpostman.com/view/29374455/2sB2qZEN9h
