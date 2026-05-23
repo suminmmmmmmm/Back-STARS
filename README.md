@@ -110,4 +110,19 @@ https://almond-comfort-a8a.notion.site/1-1c0fef49d8d580e29afcd1902561e2ad?pvs=74
 
 
 
+## 🗓️ 저희의 작업 스토리를 확인해보세요!
+
+<img width="300" height="114" alt="image" src="https://github.com/user-attachments/assets/d504bc8d-b31b-430b-a80c-14e571dc25bb" />
+
+[피그마 바로가기](https://www.figma.com/design/N9HN3sbO5PejV2UmdQwv4y/-FLAG--%EB%8F%99%EA%B5%AC%EB%9D%BC%EB%AF%B8?node-id=419-925&m=dev&t=XQXmTJmuhPbsIcM2-1)
+
+<img width="300" height="114" alt="image" src="https://github.com/user-attachments/assets/bc3150a6-97ef-4615-b8cc-d5f49c67a342" />
+
+[Miro 바로가기](https://miro.com/app/board/uXjVKdYNKQg=/?share_link_id=757977725108)
+
+## WBS
+
+개발부터 배포까지 업무 분담 내용입니다.
+
+[WBS](https://docs.google.com/spreadsheets/d/1zycyJ-8yhtTcp0kl1mLeamGc0ZltXrUM/edit?usp=sharing&ouid=110955271822501467624&rtpof=true&sd=true)
 
