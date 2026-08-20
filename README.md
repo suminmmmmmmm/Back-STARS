@@ -1,6 +1,15 @@
 # Back-STARS
 SK쉴더스 루키즈 최종 프로젝트 **백엔드 리포지토리**입니다.
 
+## 프로젝트 소개
+관광지 혼잡도 예측 및 스마트 관광 추천 시스템은 **기상 정보, 관광지 방문객 데이터, 문화행사 정보 , 인구 밀집도**를 실시간으로 수집 및 분석하여 관광지별 혼잡도를 시각화하고 방문객들에게 최적의 관광 경험을 제공하는 통합 관제 시스템입니다. 
+
+## 프로젝트 구조
+<img width="1560" height="880" alt="image" src="https://github.com/user-attachments/assets/72d456f5-c39d-46e1-87ff-3b5b6c687c2d" />
+<img width="1502" height="726" alt="image" src="https://github.com/user-attachments/assets/376f7f22-b9c1-41e2-b0eb-ae148980d995" />
+
+
+
 🏗 System Architecture
 
 본 프로젝트는 MSA(Microservice Architecture) 기반 백엔드 구조로 설계되었습니다.
@@ -24,55 +33,12 @@ SK쉴더스 루키즈 최종 프로젝트 **백엔드 리포지토리**입니다
 | **Place Service** | REST | 관광지·음식점·숙박·행사 정보 제공<br>Elasticsearch 기반 장소 검색<br>타사 리뷰 요약 및 관광지 추천 API |
 | **Congestion Service** | SSE | 실시간 인구 밀집도, 사고·통제, 날씨 정보 처리<br>SSE 기반 실시간 데이터 스트리밍 제공 |
 ---
-<details>
-<summary>로컬에서 postgreSQL 테스트</summary>
-
-1. Docker 이미지 다운로드 및 컨테이너 실행
-    `docker pull postgres:latest`
-
-2. PostgreSQL 컨테이너 실행
-    `docker run --name my-postgres -e POSTGRES_USER=root -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=stars_db -p 5432:5432 -d postgres:latest`
-
-3. Spring Boot 애플리케이션 설정
-    - 이제, Spring Boot 애플리케이션에서 PostgreSQL과 연결 설정. application.properties에 PostgreSQL 데이터베이스 설정 추가
-    ```
-    spring.datasource.url=jdbc:postgresql://localhost:5432/stars_db
-    spring.datasource.username=root
-    spring.datasource.password=admin
-    spring.datasource.driver-class-name=org.postgresql.Driver
-    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-    spring.jpa.hibernate.ddl-auto=update
-    ```
-</details>
-
-
-<details>
-<summary>PostgreSQL과 프로젝트 같이 띄우는 법</summary>
-
-1. 프로젝트 최상위 디렉토리 (/place-service, docker-compose.yml과 Dockerfile이 있는 위치)에서 docker compose up --build 실행
-2. 빌드가 완료되면 자동으로 Spring 로고가 나오면서 실행됨
-3. 다른 cmd 창에서 docker exec -it my_postgres bash 실행
-4. psql -U root -d stars_db 실행하면 접속이 될 것임
-5. 접속한 후 \dt 로 테이블 존재 확인 가능, select 문으로 데이터 확인 가능
-+ select * from area; 로 결과를 본 후, q 를 눌러야 다시 명령창으로 돌아갈 수 있음
-
-<summary>토큰 redis에 저장</summary>
-
-</details>
-
-
-
-
-
-
 
 📄 API Documentation (Postman)
 https://documenter.getpostman.com/view/29374455/2sB2qZEN9h
 
-
-
 📊 ERD
-https://www.erdcloud.com/d/hC5ZaGYqaP3oha66s
+<img width="1470" height="1182" alt="image" src="https://github.com/user-attachments/assets/caa06431-b003-43d3-884b-9749352bb63e" />
 
 NOTION
 https://almond-comfort-a8a.notion.site/1-1c0fef49d8d580e29afcd1902561e2ad?pvs=74
@@ -96,6 +62,19 @@ https://almond-comfort-a8a.notion.site/1-1c0fef49d8d580e29afcd1902561e2ad?pvs=74
 | 리뷰 작성 | 사용자가 관광지 리뷰 작성 |
 | 대중교통 정보 | 관광지 접근을 위한 대중교통 정보 제공 |
 ---
+
+##담당기능
+**Elasticsearch 기반 API 개발**
+
+- 날씨·주차·사고 데이터를 Elasticsearch에 저장하고, 조건별 검색 및 조회가 가능한 API를 설계·개발했습니다.
+- 데이터 특성에 맞는 검색 쿼리를 구성하고 중복 데이터를 제거하여 효율적인 조회가 가능하도록 구현했습니다.
+- **음식점 데이터 수집 및 PostgreSQL 저장**
+    - 외부 API를 연동하여 음식점 데이터를 수집하고, 서비스 데이터 구조에 맞게 가공하여 PostgreSQL에 저장했습니다.
+    - 데이터 중복 저장 문제를 분석하고 저장 로직을 수정하여 데이터 정합성을 개선했습니다.
+- **회원가입·로그인 API 개발**
+    - 회원가입 및 로그인 API를 구현하고 JWT 토큰 기반 인증과 Redis를 활용한 토큰 관리 기능을 적용했습니다.
+    - 중복 로그인 처리 등 실제 서비스 운영을 고려한 인증 로직을 보완했습니다.
+      
 ## 🔐 Data & Authentication
 
 - PostgreSQL을 사용하여 사용자 및 서비스 데이터를 관리
@@ -107,6 +86,8 @@ https://almond-comfort-a8a.notion.site/1-1c0fef49d8d580e29afcd1902561e2ad?pvs=74
 **기술스택**
 <img width="1718" height="970" alt="image" src="https://github.com/user-attachments/assets/b316b541-eca1-4ed2-a1f3-595c983b5a34" />
 <img width="1714" height="928" alt="image" src="https://github.com/user-attachments/assets/1e55017a-3216-4d89-b2bf-7d2ddbabd1b0" />
+
+
 
 
 
