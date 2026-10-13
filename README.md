@@ -5,9 +5,24 @@ SK쉴더스 루키즈 최종 프로젝트 **백엔드 리포지토리**입니다
 관광지 혼잡도 예측 및 스마트 관광 추천 시스템은 **기상 정보, 관광지 방문객 데이터, 문화행사 정보 , 인구 밀집도**를 실시간으로 수집 및 분석하여 관광지별 혼잡도를 시각화하고 방문객들에게 최적의 관광 경험을 제공하는 통합 관제 시스템입니다. 
 
 ## 프로젝트 구조
-<img width="1560" height="880" alt="image" src="https://github.com/user-attachments/assets/72d456f5-c39d-46e1-87ff-3b5b6c687c2d" />
-<img width="1502" height="726" alt="image" src="https://github.com/user-attachments/assets/376f7f22-b9c1-41e2-b0eb-ae148980d995" />
+<img width="1376" height="366" alt="image" src="https://github.com/user-attachments/assets/53043a6c-0502-4c28-ae89-6963f4a5d79c" />
 
+---
+
+<img width="1572" height="892" alt="image" src="https://github.com/user-attachments/assets/8da28ca7-b928-449e-82af-a944fd521de0" />
+
+- 데이터 수집 및 분기 처리 부분
+카프카 토픽에서 가져온 api 데이터를 저장할 데이터에 따라 5개의 분기로 처리하였습니다.
+- 데이터 추출 부분에서는
+입력 값의 많은 데이터 중에서 필요한 부분만 추출해서 새로운 데이터 필드에 저장하기 위해 필요 데이터 필드 설정에서는새롭게 저장한 데이터 필드만 사용할 수 있도록 하였습니다.
+- 엘라스틱 서치에 5개의 인덱스로 저장하도록
+파이프라인을 설계하였습니다.
+
+---
+<img width="1502" height="726" alt="image" src="https://github.com/user-attachments/assets/d49104e7-c008-4de8-b6a9-4f27b2f3409c" />
+
+- **MSA를 선택한 이유**: 서비스별 기능과 배포 단위를 분리해 독립적으로 관리하기 위해
+- **EKS를 사용한 이유**: 컨테이너화한 서비스를 Kubernetes 환경에서 Pod 단위로 배포하고 관리하기 위해
 
 
 🏗 System Architecture
